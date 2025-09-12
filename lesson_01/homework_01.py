@@ -27,7 +27,7 @@ side_4 = 4
 
 # task 06 == Порахуйте периметр фігури з task 05
 # та виведіть його для користувача
-perimetery = storona_1 + storona_2 + storona_3 + storona_4
+perimetery = side_1 + side_2 + side_3 + side_4
 print('perimetery =', perimetery)
 
 """
@@ -41,11 +41,11 @@ print('perimetery =', perimetery)
 У саду посадили 4 яблуні. Груш на 5 більше яблунь, а слив - на 2 менше.
 Скільки всього дерев посадили в саду?
 """
-apples_tree = 4
-pear_tree = apples_tree + 5
+apple_tree = 4
+pear_tree = apple_tree + 5
 plum_tree = pear_tree - 2
 
-how_many_trees = apples_tree + pear_tree + plum_tree
+how_many_trees = apple_tree + pear_tree + plum_tree
 print('how many trees? =', how_many_trees)
 
 # task 08
