@@ -56,7 +56,7 @@ print('how many trees? =', how_many_trees)
 """
 
 temp_before_lunch = 5
-temp_after_lunch = -10
+temp_after_lunch = temp_before_lunch - 10
 temp_around_evening = 4
 
 final_temp = temp_before_lunch + temp_after_lunch + temp_around_evening
