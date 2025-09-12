@@ -1,0 +1,17 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_24\" project-jdk-name=\"Python 3.9 (untitled)\" project-jdk-type=\"Python SDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 2ab175019341600c03fa9840afa0f19fcb0e3c61)
++++ b/.idea/misc.xml	(date 1757698367310)
+@@ -1,5 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.9 (untitled)" />
++  </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_24" project-jdk-name="Python 3.9 (untitled)" project-jdk-type="Python SDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
