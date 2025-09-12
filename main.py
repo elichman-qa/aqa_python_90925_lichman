@@ -1,3 +1,4 @@
 last_name = "Lichman"
+first_name = "Yevhen"
 
-print('Yevhen', last_name)
+print(first_name, last_name)
