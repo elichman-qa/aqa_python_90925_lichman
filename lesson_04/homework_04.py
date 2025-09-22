@@ -43,6 +43,8 @@ print("______________________________\ntask 03\n")
 
 spaces = "  "
 without_double_spaces = adwentures_of_tom_sawer.replace("....", " ").replace("\n", " ")
+
+
 i = 0
 while i > -1:
     without_double_spaces = without_double_spaces.replace(spaces, " ")
@@ -62,7 +64,7 @@ print("______________________________\ntask 05\n")
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 """
 
-print(len([ch for ch in without_double_spaces if ch.isupper()]))
+print(len([word for word in without_double_spaces.split() if word.istitle()]))
 
 # task 06
 print("______________________________\ntask 06\n")
