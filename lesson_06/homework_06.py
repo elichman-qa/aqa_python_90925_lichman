@@ -12,3 +12,14 @@ while True:
         break
     else:
         print(f"Тут немає {ch}, тож введіть ще одне.")
+
+
+list1 = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']
+
+list2 = []
+i = 0
+while i < len(list1):
+    if isinstance(list1[i], str):
+        list2.append(list1[i])
+    i += 1
+print(list2)
