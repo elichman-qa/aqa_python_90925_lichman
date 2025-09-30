@@ -56,7 +56,7 @@ for car in car_data.items():
         search_result[name] = characteristics
 sorted_search_result = sorted(search_result.items(), key=lambda item:item[1][4])
 for name, (color, year, motor, carcase, price) in sorted_search_result[:5]:
-    print(f"{name}: {color}, {year}, {motor}L, {carcase}, ${price}")
+    print(f"{name}: {color}˚, {year}, {motor}L, {carcase}, ${price}")
 
 
 
