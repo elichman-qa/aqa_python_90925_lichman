@@ -3,6 +3,8 @@
 лише до максимального значення для добутку - 25.
 Код майже готовий, треба знайти помилки та випраавити\доповнити.
 """
+from lesson_06.homework_05 import print_people_30years
+from lesson_06.homework_06 import search_ch_in_word, sum_pare_value, print_str_value
 
 
 def multiplication_table(number):
@@ -116,9 +118,13 @@ str2 = "cat"
 print(find_substring(str1, str2))  # поверне -1
 
 # task 7
+print_people_30years()
 # task 8
+search_ch_in_word('h')
 # task 9
+sum_pare_value(my_list_nums2)
 # task 10
+print_str_value(lines)
 """  Оберіть будь-які 4 таски з попередніх домашніх робіт та
 перетворіть їх у 4 функції, що отримують значення та повертають результат.
 Обоязково документуйте функції та дайте зрозумілі імена змінним.

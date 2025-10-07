@@ -5,33 +5,35 @@ if (len(list(set(user_data)))) > 10:
 else:
     print(False)
 
-while True:
-    ch = 'h'
-    word = input(f"Введіть слово з літерою {ch}: ")
-    if ch in word.lower():
-        print("Так! Це вірний варіант!")
-        break
-    else:
-        print(f"Тут немає {ch}, тож введіть ще одне.")
+def search_ch_in_word(ch) :
+    while True:
+        word = input(f"Введіть слово з літерою {ch}: ")
+        if ch in word.lower():
+            print("Так! Це вірний варіант!")
+            break
+        else:
+            print(f"Тут немає {ch}, тож введіть ще одне.")
 
 list1 = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']
 
 list2 = []
-i = 0
-while i < len(list1):
-    if isinstance(list1[i], str):
-        list2.append(list1[i])
-    i += 1
-print(list2)
-
+def print_str_value(some_list):
+    i = 0
+    while i < len(some_list):
+        if isinstance(some_list[i], str):
+            list2.append(some_list[i])
+        i += 1
+    print(list2)
 
 print("—" * 120, "\n")
 nums = [1, 9, 8, 4, 165, 12, 54, 84, 55, 21, 11, 6, 7, 65]
 
 nums2 = []
-i = 0
-while i < len(nums):
-    if nums[i]%2 == 0:
-        nums2.append(nums[i])
-    i += 1
-print('Сума парних чисел:', sum(nums2))
+
+def sum_pare_value(list_nums) :
+    i = 0
+    while i < len(list_nums):
+        if list_nums[i]%2 == 0:
+            nums2.append(list_nums[i])
+        i += 1
+    print('Сума парних чисел:', sum(nums2))
