@@ -88,6 +88,9 @@ people_records.insert(0, ('Jeka', 'Lichman', 32, 'QA', 'Dnipro'))
 people_records[1], people_records[5] = people_records[5], people_records[1]
 print(people_records)
 
-if people_records[6][2] >= 30 and people_records[10][2] >= 30 and people_records[13][2] >= 30:
-    print(True, "This value for all people have age >=30")
-else: print(people_records[6][2], people_records[10][2], people_records[13][2], "This value for all people Don't have age >=30")
+def print_people_30years ():
+    if people_records[6][2] >= 30 and people_records[10][2] >= 30 and people_records[13][2] >= 30:
+        print(True, "This value for all people have age >=30")
+    else: print(people_records[6][2], people_records[10][2], people_records[13][2], "This value for all people Don't have age >=30")
+
+print_people_30years()
