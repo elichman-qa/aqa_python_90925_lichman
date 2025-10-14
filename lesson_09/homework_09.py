@@ -36,6 +36,39 @@ class Rhombus:
             super().__setattr__("side_d", value)
             return
 
+        if key == 'side_b':
+            if not isinstance(value, (int, float)):
+                raise TypeError(f'Значення повинно бути числом, а ви вносите тип {type(value).__name__}')
+            if value <= 0:
+                raise ValueError(f'Значення повинно бути числом більше 0, а ви вносите значення ={value}')
+            super().__setattr__(key, value)
+            super().__setattr__("side_a", value)
+            super().__setattr__("side_c", value)
+            super().__setattr__("side_d", value)
+            return
+
+        if key == 'side_c':
+            if not isinstance(value, (int, float)):
+                raise TypeError(f'Значення повинно бути числом, а ви вносите тип {type(value).__name__}')
+            if value <= 0:
+                raise ValueError(f'Значення повинно бути числом більше 0, а ви вносите значення ={value}')
+            super().__setattr__(key, value)
+            super().__setattr__("side_b", value)
+            super().__setattr__("side_a", value)
+            super().__setattr__("side_d", value)
+            return
+
+        if key == 'side_d':
+            if not isinstance(value, (int, float)):
+                raise TypeError(f'Значення повинно бути числом, а ви вносите тип {type(value).__name__}')
+            if value <= 0:
+                raise ValueError(f'Значення повинно бути числом більше 0, а ви вносите значення ={value}')
+            super().__setattr__(key, value)
+            super().__setattr__("side_b", value)
+            super().__setattr__("side_c", value)
+            super().__setattr__("side_a", value)
+            return
+
         if key == 'angle_ab':
             if not isinstance(value, (int, float)):
                 raise TypeError(f'Значення повинно бути числом, а ви вносите тип {type(value).__name__}')
@@ -47,9 +80,61 @@ class Rhombus:
             super().__setattr__('angle_cd', value)
             super().__setattr__('angle_da', 180 - value)
             return
+
+        if key == 'angle_bc':
+            if not isinstance(value, (int, float)):
+                raise TypeError(f'Значення повинно бути числом, а ви вносите тип {type(value).__name__}')
+            if not 1 <= value < 180:
+                raise ValueError(
+                    f'Значення повинно бути числом більше 0, і не більше 180 а ви вносите значення ={value}')
+            super().__setattr__(key, value)
+            super().__setattr__('angle_ab', 180 - value)
+            super().__setattr__('angle_cd', 180 - value)
+            super().__setattr__('angle_da', value)
+            return
+
+        if key == 'angle_cd':
+            if not isinstance(value, (int, float)):
+                raise TypeError(f'Значення повинно бути числом, а ви вносите тип {type(value).__name__}')
+            if not 1 <= value < 180:
+                raise ValueError(
+                    f'Значення повинно бути числом більше 0, і не більше 180 а ви вносите значення ={value}')
+            super().__setattr__(key, value)
+            super().__setattr__('angle_bc', 180 - value)
+            super().__setattr__('angle_ab', value)
+            super().__setattr__('angle_da', 180 - value)
+            return
+
+        if key == 'angle_da':
+            if not isinstance(value, (int, float)):
+                raise TypeError(f'Значення повинно бути числом, а ви вносите тип {type(value).__name__}')
+            if not 1 <= value < 180:
+                raise ValueError(
+                    f'Значення повинно бути числом більше 0, і не більше 180 а ви вносите значення ={value}')
+            super().__setattr__(key, value)
+            super().__setattr__('angle_bc', value)
+            super().__setattr__('angle_cd', 180 - value)
+            super().__setattr__('angle_ab', 180 - value)
+            return
+
         super().__setattr__(key, value)
 
+    def __str__(self):
+        return (f'Rhombus "{self.name}": \n'
+                f'Side A = {self.side_a}, Side B = {self.side_b}, '
+                f'Side C = {self.side_c}, Side D = {self.side_d}\n'
+                f'<AB = {self.angle_ab}°, <BC = {self.angle_bc}°, '
+                f'<CD = {self.angle_cd}°, <DA = {self.angle_da}°')
 
-figure = Rhombus("figure", (int(input("Для зазначення параметрів фігури Ромб, введіть довжину однієї зі сторін: "))), (int(input("Тепер, введіть значення для одного з кутів:  "))))
-print(f' Side A = {figure.side_a}, Side B = {figure.side_b}, Side C = {figure.side_c}, Side D = {figure.side_d}')
-print(f' <AB = {figure.angle_ab}°, <BC = {figure.angle_bc}°, <CD = {figure.angle_cd}°, <DA = {figure.angle_da}°')
+
+
+
+r = Rhombus("r", 5, 10)
+r.angle_bc = 30
+print(r)
+
+
+figure = Rhombus("figure",
+                 (int(input("Для зазначення параметрів фігури Ромб, введіть довжину однієї зі сторін: "))),
+                 (int(input("Тепер, введіть значення для одного з кутів:  "))))
+print(figure)
